@@ -1,9 +1,10 @@
-;;;http://local.wasp.uwa.edu.au/~pbourke/fractals/lorenz/                                     
-;;;// N = quantidade de iterações                                                             
-;;;// h, a, b, c: parâmetros iniciais                                                         
-;;;// x0, y0, z0: ponto inicial                                                               
-;;;// rad = raio da esfera desenhada                                                          
-;; 0.001099, 10, 28, 8/3, 0.0001, 0.0001, 0.0001, 350000, 0.04                                
+;;; Prof. José Luis Menegotto DEG/POLI/UFRJ
+;;; Para ver outros atratores visitar http://paulbourke.net/fractals/ 
+;;; N = quantidade de iterações                                                             
+;;; h, a, b, c: parâmetros iniciais                                                         
+;;; x0, y0, z0: ponto inicial                                                               
+;;; rad = raio da esfera desenhada                                                          
+;;; 0.001099, 10, 28, 8/3, 0.0001, 0.0001, 0.0001, 350000, 0.04                                
 
 (defun lorenz (#pre #a #b #e #n #c / h a b c x0 y0 z0 N rad)
 
@@ -289,16 +290,4 @@
 		         ((> 255 (atoi #c))  (itoa (1+ (atoi #c))))
 			 (t                  "9")
 	           )
-)
-
-(defun c:foto (#n)
-  
-                         (c:rpref "DEST"          "FILE")
-                         (c:rpref "STYPE"  "ARAY")
-                         (c:rpref "TOGGLE" "SMOOTH" "ON")
-                         (c:rpref "TOGGLE" "SHADOW" "ON")
-  
-                         (c:rfileopt "BMP"  640  480  1.0  "C8")
-  
-                         (c:render   (strcat "c:/foto_" (itoa #n))  "0,0"   "640,480")   
 )

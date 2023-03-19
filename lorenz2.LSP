@@ -1,3 +1,11 @@
+;;; Prof. José Luis Menegotto DEG/POLI/UFRJ
+;;; Para ver outros atratores visitar http://paulbourke.net/fractals/                                     
+;;;N = quantidade de iterações                                                             
+;;;h, a, b, c: parâmetros iniciais                                                         
+;;;x0, y0, z0: ponto inicial                                                               
+;;;rad = raio do circulo desenhado                                                         
+;; 0.001099, 10, 28, 8/3, 0.0001, 0.0001, 0.0001, 350000, 0.04    
+
 (defun  ambienteX ()
                      (cond (*aobj* (princ "\nAmbiente ActiveX ativo.\n"))      
 		           (t      (vl-load-com)                               
@@ -24,13 +32,7 @@
 		              (< -100000  (cadr  #pt)  100000)
 		              (< -100000  (caddr #pt)  100000)
 		         ))
-
-;;;http://local.wasp.uwa.edu.au/~pbourke/fractals/lorenz/                                     
-;;;// N = quantidade de iterações                                                             
-;;;// h, a, b, c: parâmetros iniciais                                                         
-;;;// x0, y0, z0: ponto inicial                                                               
-;;;// rad = raio do circulo desenhado                                                         
-;; 0.001099, 10, 28, 8/3, 0.0001, 0.0001, 0.0001, 350000, 0.04                                
+                           
 
 (defun lorenz (#pre #a #b #e #n #c / h a b c x0 y0 z0 N rad)
 
