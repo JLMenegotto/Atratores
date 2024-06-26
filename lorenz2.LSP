@@ -1,7 +1,7 @@
-;;; Prof. José Luis Menegotto DEG/POLI/UFRJ
+;;; Autor: Prof. JosÃ© Luis Menegotto DEG/POLI/UFRJ
 ;;; Para ver outros atratores visitar http://paulbourke.net/fractals/                                     
-;;;N = quantidade de iterações                                                             
-;;;h, a, b, c: parâmetros iniciais                                                         
+;;;N = quantidade de iteraÃ§Ãµes                                                             
+;;;h, a, b, c: parÃ¢metros iniciais                                                         
 ;;;x0, y0, z0: ponto inicial                                                               
 ;;;rad = raio do circulo desenhado                                                         
 ;; 0.001099, 10, 28, 8/3, 0.0001, 0.0001, 0.0001, 350000, 0.04    
@@ -117,7 +117,7 @@
 
 (defun lor_color (#c)  (itoa (+ 1 (if (>= 254 (atoi #c)) (atoi #c) 0))))
 
-;; Equações utilizadas                                                                                     
+;; EquaÃ§Ãµes utilizadas                                                                                     
 
 (defun eq_JLM01 (#x #y #z #a #b #c #e #g)
   
